@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Memory Album</title>
+        <title>Cat Album</title>
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="Images/Cat.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,38 +155,18 @@
             <div class="container-fluid">
                 <div class="navbar-brand">
                     <img class="department-logo" src="Images/BirthdayCake.png">
-                    <div class="brand-text">Memory Album</div>
+                    <div class="brand-text">Cat Album</div>
                 </div>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                    <a class="btn btn-light" href="CatAlbum.html">Cat Album</a>
+                    <a class="btn btn-light" href="index.html">Memory Album</a>
                     </li>
                 </ul>
             </div>
         </nav>
         
-        <form class="form" style="margin-top: 5%; height: 60%">
-            <div class="Hall-content2" style="height:80vh; width:50%; background-color:transparent;">
-                <select class="monthdropdown" id="monthSelect">
-                    <option value="all">Search by Month</option>
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                </select>
-                <select class="yeardropdown" id="yearSelect">
-                    <option value="all">Search by Year</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                </select>
+        <form class="form" style="margin-top: 13vh; height: 60%">
+            <div class="Hall-content2" style="height:85vh; width:50%; background-color:transparent;">
             <div class="Hall-content" style="height:80%; width:100%; background-color:transparent;">
                 <div id="cardContainer"></div>
             </div>
@@ -205,11 +185,16 @@
         <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
         <script>         
 const HallofFame = [
-            { Image: "Images/Stel&Gabi1.jpg", Year: "2023", Month: "December" },
-            { Image: "Images/Stel&Gabi2.jpg", Year: "2023", Month: "June" },
-            { Image: "Images/Stel&Gabi3.jpg", Year: "2024", Month: "January" },
-            { Image: "Images/Stel&Gabi4.png", Year: "2024", Month: "April" },
-
+            { Image: "CatImages/Cat1.png"},
+            { Image: "CatImages/Cat2.png"},
+            { Image: "CatImages/Cat3.png"},
+            { Image: "CatImages/Cat4.png"},
+            { Image: "CatImages/Cat5.png"},
+            { Image: "CatImages/Cat6.png"},
+            { Image: "CatImages/Cat7.png"},
+            { Image: "CatImages/Cat8.png"},
+            { Image: "CatImages/Cat9.png"},
+            { Image: "CatImages/Cat10.png"},
         ];
 
         // Function to create card HTML
@@ -245,10 +230,6 @@ const HallofFame = [
 
             renderCards(filteredCards);
         }
-
-        // Event listener for the search input
-        document.getElementById('monthSelect').addEventListener('change', filterCards);
-        document.getElementById('yearSelect').addEventListener('change', filterCards);
 
         renderCards(HallofFame);
 
