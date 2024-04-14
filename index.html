@@ -4,7 +4,7 @@
     <head>
         <title>Memory Album</title>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/x-icon" href="Image/MascotLogo.png">
+        <link rel="icon" type="image/x-icon" href="Images/Cat.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
@@ -88,14 +88,14 @@
                font-size: 2vh;
            }
             
-            .Hall-content {
-    overflow-y: scroll;
-    justify-content: center;
-    align-items: center;
-    height: 80%; /* Set a fixed height */
-    width: 100%; /* Ensure full width */
-    background-color: transparent;
-}
+           .Hall-content {
+               overflow-y: scroll;
+               justify-content: center;
+               align-items: center;
+               height: 80%; /* Set a fixed height */
+               width: 100%; /* Ensure full width */
+               background-color: transparent;
+           }
             
             .Hall-content2 {
                 justify-content: center;
@@ -122,12 +122,21 @@
                 text-align: center;
                 margin: auto;
                 width: 100%;
-                height: 10vh;
+                height: 11vh;
                 position: absolute;
                 bottom: 0;
                 font-size: 2vh;
                 padding: 1%;
             }
+            
+            .spinning-cat {
+                transition: transform 1s ease-in-out;
+            }
+            
+            .spinning-cat:hover {
+                transform: rotate(720deg);
+            }
+
             
         </style>
     </head>
@@ -172,7 +181,8 @@
 
         <!-- Footer -->
         <div class="footer">
-            <p>Happy Birthday, Gabi! Here's a gift from Monko to keep your memory album with your friends.</p>
+            <img src="Images/Cat.png" class="spinning-cat" style="height: 5vh">
+            <p>Happy Birthday, Gabi! Enjoy your album!</p>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -184,6 +194,8 @@ const HallofFame = [
             { Image: "Images/Stel&Gabi1.jpg", Year: "2023", Month: "December" },
             { Image: "Images/Stel&Gabi2.jpg", Year: "2023", Month: "June" },
             { Image: "Images/Stel&Gabi3.jpg", Year: "2024", Month: "January" },
+            { Image: "Images/Stel&Gabi4.png", Year: "2024", Month: "April" },
+
         ];
 
         // Function to create card HTML
